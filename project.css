@@ -1,0 +1,95 @@
+/* Project / case-study page */
+body.project .layout { display: block; }
+
+.project-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 8%, transparent);
+}
+
+.project-home {
+  line-height: 0;
+  display: inline-block;
+}
+.project-home img {
+  display: block;
+  height: 44px;
+  width: auto;
+}
+[data-theme="dark"] .project-home img { filter: var(--logo-filter); }
+
+.project-back {
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--text) 15%, transparent);
+  transition: background .18s ease, border-color .18s ease, transform .18s ease;
+}
+.project-back:hover {
+  background: color-mix(in srgb, var(--text) 6%, transparent);
+  transform: translateX(-2px);
+}
+
+.project-main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 40px 120px;
+}
+
+.project-meta {
+  margin-bottom: 40px;
+}
+.project-eyebrow {
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+.project-title {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+}
+.project-sub {
+  font-family: "DM Mono", ui-monospace, monospace;
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.project-video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.35);
+}
+.project-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 720px) {
+  .project-header { padding: 14px 20px; }
+  .project-main { padding: 36px 20px 80px; }
+}

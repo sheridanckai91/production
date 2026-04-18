@@ -38,9 +38,22 @@
 </script>
 </head>
 <body>
+  <header class="mobile-header">
+    <a class="mobile-logo" href="index.html" aria-label="Sheridan Telford — home">
+      <img src="SheridanTelford_logo.png" alt="Sheridan Telford" />
+    </a>
+    <div class="mobile-header-actions">
+      <button class="theme-toggle" type="button" aria-label="Toggle theme">☾</button>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="sidebar-backdrop" hidden></div>
   <button class="theme-toggle" type="button" aria-label="Toggle theme">☾</button>
   <main class="layout">
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
+      <button class="sidebar-close" type="button" aria-label="Close menu">×</button>
       <h1 class="logo">
         <img src="SheridanTelford_logo.png" alt="Sheridan Telford" />
       </h1>
@@ -65,13 +78,18 @@
 
     <section class="gallery">
       <div class="column">
-        <figure class="card" data-label="M Le Monde — Cover">
-          <img src="MleMonde_Cover03.png" alt="M Le Monde cover" loading="lazy" />
-          <figcaption>M Le Monde — Cover</figcaption>
+        <figure class="card" data-label="M Le Monde — Karim Sadli">
+          <img src="MleMonde_KarimSadli.png" alt="M Le Monde by Karim Sadli" loading="lazy" />
+          <figcaption>M Le Monde — Karim Sadli</figcaption>
         </figure>
         <figure class="card" data-label="Prada Galleria — with Scarlett Johansson">
-          <img src="Prada Galleria_SJ.png" alt="Prada Galleria campaign with Scarlett Johansson" loading="lazy" />
+          <img src="PradaGalleria_SJ.png" alt="Prada Galleria campaign with Scarlett Johansson" loading="lazy" />
           <figcaption>Prada Galleria — with Scarlett Johansson</figcaption>
+          <a class="card-link" href="prada.html" aria-label="Open Prada Galleria project"></a>
+        </figure>
+        <figure class="card" data-label="Hermès — Faubourg Calling, Second Chapter">
+          <img src="Hérmes_Second Chapter_Faubourg Calling_2024_.png" alt="Hermès Faubourg Calling — Second Chapter, 2024" loading="lazy" />
+          <figcaption>Hermès — Faubourg Calling, Second Chapter</figcaption>
         </figure>
         <figure class="card" data-label="Ouer">
           <img src="Ouer_002.png" alt="Ouer" loading="lazy" />
@@ -80,6 +98,10 @@
         <figure class="card" data-label="Khaite">
           <img src="Khaite_2.jpg" alt="Khaite" loading="lazy" />
           <figcaption>Khaite</figcaption>
+        </figure>
+        <figure class="card" data-label="Hodinkee — Vintage Ads">
+          <img src="Hodinkee_VintageAds_04.png" alt="Hodinkee Vintage Ads" loading="lazy" />
+          <figcaption>Hodinkee — Vintage Ads</figcaption>
         </figure>
         <figure class="card" data-label="Interview Magazine — Doja Cat">
           <img src="doja.jpg" alt="Interview Magazine Doja Cat" loading="lazy" />
@@ -100,17 +122,25 @@
           <img src="ToryBurch_2022_002.png" alt="Tory Burch 2022" loading="lazy" />
           <figcaption>Tory Burch — 2022</figcaption>
         </figure>
+        <figure class="card" data-label="Telfar × Converse">
+          <img src="Telfar_x_Converse.png" alt="Telfar x Converse" loading="lazy" />
+          <figcaption>Telfar × Converse</figcaption>
+        </figure>
         <figure class="card" data-label="M Le Monde — Karim Sadli">
-          <img src="M le Monde - Karim Sadli 01.jpg" alt="M Le Monde by Karim Sadli" loading="lazy" />
+          <img src="MleMonde_KarimSadli_01.jpg" alt="M Le Monde by Karim Sadli" loading="lazy" />
           <figcaption>M Le Monde — Karim Sadli</figcaption>
         </figure>
-        <figure class="card" data-label="Vogue — Emma">
-          <img src="Vogue_Emma_004.png" alt="Vogue Emma" loading="lazy" />
-          <figcaption>Vogue — Emma</figcaption>
+        <figure class="card" data-label="Hodinkee — Vintage Ads">
+          <img src="Hodinkee_VintageAds_05.png" alt="Hodinkee Vintage Ads" loading="lazy" />
+          <figcaption>Hodinkee — Vintage Ads</figcaption>
         </figure>
-        <figure class="card" data-label="Vogue — Cover">
-          <img src="VogueCover.png" alt="Vogue Cover" loading="lazy" />
-          <figcaption>Vogue — Cover</figcaption>
+        <figure class="card" data-label="Vogue — Emma Corrin">
+          <img src="Vogue_Emma_004.png" alt="Vogue Emma Corrin" loading="lazy" />
+          <figcaption>Vogue — Emma Corrin</figcaption>
+        </figure>
+        <figure class="card" data-label="Vogue September 2023">
+          <img src="Vogue_Sept2023.png" alt="Vogue September 2023" loading="lazy" />
+          <figcaption>Vogue September 2023</figcaption>
         </figure>
         <figure class="card" data-label="Zara Men">
           <img src="ZaraMen.jpg" alt="Zara Men" loading="lazy" />
