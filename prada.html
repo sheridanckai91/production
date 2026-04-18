@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prada Galleria — Sheridan Telford</title>
+<meta name="description" content="Prada Galleria with Scarlett Johansson — a project by Sheridan Telford." />
+
+<meta property="og:type" content="video.other" />
+<meta property="og:title" content="Prada Galleria — Sheridan Telford" />
+<meta property="og:description" content="Prada Galleria with Scarlett Johansson." />
+<meta property="og:image" content="PradaGalleria_SJ.png" />
+
+<link rel="icon" type="image/png" href="SheridanTelford_logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="project.css" />
+<script>
+  (function () {
+    try {
+      var s = localStorage.getItem("theme");
+      var d = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-theme", s || (d ? "dark" : "light"));
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body class="project">
+  <button class="theme-toggle" type="button" aria-label="Toggle theme">☾</button>
+
+  <header class="project-header">
+
+    <a class="project-home" href="index.html" aria-label="Back to portfolio">
+      <img src="SheridanTelford_logo.png" alt="Sheridan Telford" />
+    </a>
+    <a class="project-back" href="index.html">← Back</a>
+  </header>
+
+  <main class="project-main">
+    <div class="project-meta">
+      <p class="project-eyebrow">Campaign</p>
+      <h1 class="project-title">Prada Galleria</h1>
+      <p class="project-sub">with Scarlett Johansson</p>
+    </div>
+
+    <div class="project-video">
+      <iframe
+        loading="lazy"
+        title="Prada Galleria — with Scarlett Johansson"
+        src="https://play.gumlet.io/embed/69e37904d04993c17ed1f241"
+        referrerpolicy="origin"
+        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write;"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
