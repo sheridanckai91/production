@@ -123,11 +123,40 @@ a { color: inherit; }
 .links a:not(:first-child) { text-decoration: underline; text-underline-offset: 3px; }
 .links a:hover { color: var(--accent); }
 
+.socials {
+  margin-top: 14px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.socials a {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  transition: transform .18s ease, opacity .18s ease;
+  opacity: 0.85;
+}
+.socials a:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+.socials img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+[data-theme="dark"] .socials img {
+  filter: invert(1) brightness(1.1);
+}
+
 /* ---------- Theme toggle ---------- */
 .theme-toggle {
   position: fixed;
   bottom: 20px;
-  left: 24px;
+  right: 24px;
   z-index: 20;
   width: 36px;
   height: 36px;
