@@ -82,10 +82,10 @@ a { color: inherit; }
   top: 0;
   align-self: start;
   height: 100vh;
-  padding: var(--pad);
+  padding: 32px var(--pad);
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
   overflow: hidden;
 }
 
