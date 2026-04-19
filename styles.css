@@ -202,8 +202,7 @@ a { color: inherit; }
 }
 
 .site-footer {
-  margin-top: auto;
-  padding-top: 24px;
+  margin-top: 2px;
   font-family: "DM Mono", ui-monospace, monospace;
   font-size: 12px;
   text-transform: lowercase;
