@@ -99,6 +99,29 @@ a { color: inherit; }
   max-width: 320px;
   height: auto;
 }
+.svg-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.logo-svg {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  color: var(--accent);
+  filter: url(#logo-wave);
+  transition: filter .9s cubic-bezier(.22,.61,.36,1);
+  will-change: filter;
+}
+body.is-scrolling .logo-svg {
+  filter: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-svg { filter: none; }
+}
 
 .role {
   font-family: "DM Mono", ui-monospace, monospace;
@@ -410,6 +433,13 @@ a { color: inherit; }
     height: 48px;
     width: auto;
     transition: opacity .2s ease;
+  }
+  .mobile-logo .logo-svg {
+    display: block;
+    height: 48px;
+    width: auto;
+    max-width: none;
+    transition: opacity .2s ease, filter .25s ease;
   }
   [data-theme="dark"] .mobile-logo img { filter: var(--logo-filter); }
 

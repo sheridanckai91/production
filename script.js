@@ -76,6 +76,16 @@
     if (e.matches) closeDrawer();
   });
 
+  // --- Pause logo wave while scrolling ---
+  let scrollTimer;
+  window.addEventListener("scroll", () => {
+    document.body.classList.add("is-scrolling");
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+      document.body.classList.remove("is-scrolling");
+    }, 700);
+  }, { passive: true });
+
   // --- Reveal on scroll ---
   const cards = document.querySelectorAll(".card");
   if ("IntersectionObserver" in window) {
